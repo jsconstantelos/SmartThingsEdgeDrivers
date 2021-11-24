@@ -27,6 +27,9 @@ local driver_template = {
     capabilities.powerMeter,
     capabilities.energyMeter,
     capabilities.refresh
+  },
+  sub_drivers = {
+    require("fortrezz-meter")
   }
 }
 
