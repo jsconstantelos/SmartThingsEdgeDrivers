@@ -1,0 +1,7 @@
+zwaveManufacturer:
+  - id: "FortrezzWaterMeter"
+    deviceLabel: FortrezZ Water Meter
+    manufacturerId: 0x0084
+    productType: 0x2101
+    productId: 0x0473
+    deviceProfileName: base-water-meter
