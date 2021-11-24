@@ -1,4 +1,4 @@
--- Copyright 2021 SmartThings
+-- Copyright 2021 JSConstantelos
 --
 -- Licensed under the Apache License, Version 2.0 (the "License");
 -- you may not use this file except in compliance with the License.
@@ -27,18 +27,10 @@ local driver_template = {
     capabilities.powerMeter,
     capabilities.energyMeter,
     capabilities.refresh
-  },
-  lifecycle_handlers = {
-    added = device_added
-  },
-  sub_drivers = {
-    require("qubino-meter"),
-    require("aeotec-gen5-meter"),
-    require("aeon-meter")
   }
 }
 
 defaults.register_for_default_handlers(driver_template, driver_template.supported_capabilities)
 --- @type st.zwave.Driver
-local electricMeter = ZwaveDriver("zwave_electric_meter", driver_template)
-electricMeter:run()
+local waterMeter = ZwaveDriver("zwave_electric_meter", driver_template)
+waterMeter:run()
