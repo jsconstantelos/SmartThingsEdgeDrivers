@@ -32,5 +32,5 @@ local driver_template = {
 
 defaults.register_for_default_handlers(driver_template, driver_template.supported_capabilities)
 --- @type st.zwave.Driver
-local waterMeter = ZwaveDriver("zwave_electric_meter", driver_template)
+local waterMeter = ZwaveDriver("fortrezz-water-meter", driver_template)
 waterMeter:run()
