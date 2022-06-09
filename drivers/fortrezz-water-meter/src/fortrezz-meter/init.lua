@@ -12,8 +12,13 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
+local capabilities = require "st.capabilities"
 --- @type st.zwave.CommandClass.Configuration
 local Configuration = (require "st.zwave.CommandClass.Configuration")({ version=1 })
+--- @type st.zwave.CommandClass.Meter
+local Meter = (require "st.zwave.CommandClass.Meter")({ version=3 })
+--- @type st.zwave.CommandClass
+local cc = require "st.zwave.CommandClass"
 
 local do_configure = function (self, device)
   device:send(Configuration:Set({parameter_number = 4, size = 1, configuration_value = 1})) -- Reporting Rate Threshhold
