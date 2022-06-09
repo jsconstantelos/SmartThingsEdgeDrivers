@@ -26,3 +26,22 @@ components:
     version: 1
   categories:
   - name: FortrezzWaterMeter
+preferences:
+- name: "reportRate"
+  title: "Reporting Rate Threshhold"
+  description: "The time interval between meter reports while water is flowing.  6 = 60 seconds, 1 = 10 seconds. Options are 1, 2, 3, 4, 5, or 6."
+  required: false
+  preferenceType: number
+  definition:
+    minimum: 1
+    maximum: 6
+    default: 1
+- name: "highFlowRate"
+  title: "High Flow Rate Threshhold"
+  description: "Flow rate (in gpm) that will trigger a notification."
+  required: false
+  preferenceType: number
+  definition:
+    minimum: 1
+    maximum: 60
+    default: 12
