@@ -14,3 +14,16 @@
 
 --- @type st.zwave.CommandClass.Configuration
 local Configuration = (require "st.zwave.CommandClass.Configuration")({ version=1 })
+
+local do_configure = function (self, device)
+  device:send(Configuration:Set({parameter_number = 4, size = 1, configuration_value = 1})) -- Reporting Rate Threshhold
+  device:send(Configuration:Set({parameter_number = 5, size = 1, configuration_value = 12})) -- High Flow Rate Threshhold
+end
+
+local fortrezz_meter = {
+  lifecycle_handlers = {
+    doConfigure = do_configure
+  }
+}
+
+return fortrezz_meter
