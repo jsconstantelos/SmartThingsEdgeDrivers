@@ -28,6 +28,9 @@ local driver_template = {
     capabilities.energyMeter,
     capabilities.refresh
   },
+  lifecycle_handlers = {
+    added = device_added
+  },
   sub_drivers = {
     require("fortrezz-meter")
   }
