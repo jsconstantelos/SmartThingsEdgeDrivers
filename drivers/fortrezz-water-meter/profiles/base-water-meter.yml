@@ -12,6 +12,16 @@ components:
     version: 1
   - id: temperatureMeasurement
     version: 1
+  - id: laughbook63613.waterFlowRate
+    version: 1
+  - id: laughbook63613.highestWaterFlowRate
+    version: 1
+  - id: laughbook63613.totalGallonsUsed
+    version: 1
+  - id: laughbook63613.gallonsLastUsed
+    version: 1
+  - id: laughbook63613.highestGallonsUsed
+    version: 1
   - id: refresh
     version: 1
   categories:
