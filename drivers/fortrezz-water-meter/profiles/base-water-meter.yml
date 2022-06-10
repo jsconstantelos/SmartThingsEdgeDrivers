@@ -12,6 +12,8 @@ components:
     version: 1
   - id: temperatureMeasurement
     version: 1
+  - id: waterSensor
+    version: 1
   - id: laughbook63613.waterFlowRate
     version: 1
   - id: laughbook63613.highestWaterFlowRate
