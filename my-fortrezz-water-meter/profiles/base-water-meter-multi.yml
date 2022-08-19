@@ -1,0 +1,65 @@
+name: base-water-meter-multi
+components:
+- id: main
+  capabilities:
+  - id: laughbook63613.waterFlowRate
+    version: 1
+  - id: laughbook63613.gallonsLastUsed
+    version: 1
+  - id: laughbook63613.totalGallonsUsed
+    version: 1
+  - id: laughbook63613.highestWaterFlowRate
+    version: 1
+  - id: laughbook63613.highestGallonsUsed
+    version: 1
+  - id: temperatureMeasurement
+    version: 1
+  - id: waterSensor
+    version: 1
+  - id: powerSource
+    version: 1
+  - id: battery
+    version: 1
+  - id: powerMeter
+    version: 1
+  - id: energyMeter
+    version: 1
+  - id: refresh
+    version: 1
+  categories:
+  - name: WaterValve
+preferences:
+  - name: "changeProfile"
+    title: "Select Tile Type"
+    description: "Select Multi-Tile or Single-Tile Type:"
+    required: false
+    preferenceType: enumeration
+    definition:
+      options:
+        "Single": "Single-Tile"
+        "Multi" : "Multi-Tile"
+      default: "Single"
+  - name: "reportRate"
+    title: "Reporting Rate Threshhold"
+    description: "The time interval between meter reports while water is flowing.  6 = 60 seconds, 1 = 10 seconds. Options are 1, 2, 3, 4, 5, or 6."
+    required: false
+    preferenceType: number
+    definition:
+      minimum: 1
+      maximum: 6
+      default: 1
+  - name: "highFlowRate"
+    title: "High Flow Rate Threshhold"
+    description: "Flow rate (in gpm) that will trigger a notification."
+    required: false
+    preferenceType: number
+    definition:
+      minimum: 1
+      maximum: 60
+      default: 12
+metadata:
+  deviceType: WaterValve
+  ocfDeviceType: oic.d.watervalve
+  deviceTypeId: WaterValve
+  mnmn: SmartThingsCommunity
+  vid: f67e431a-363a-384b-bb62-f5402523d3af
