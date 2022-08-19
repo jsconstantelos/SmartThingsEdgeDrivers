@@ -1,0 +1,22 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{waterUsedLast.value}} {{waterUsedLast.unit}}"
+            }
+        ],
+        "actions": []
+    },
+    "detailView": [
+        {
+            "label": "Gallons Last Used",
+            "displayType": "state",
+            "state": {
+                "label": "{{waterUsedLast.value}}",
+                "unit": "waterUsedLast.unit"
+            }
+        }
+    ],
+    "id": "laughbook63613.gallonsLastUsed",
+    "version": 1
+}

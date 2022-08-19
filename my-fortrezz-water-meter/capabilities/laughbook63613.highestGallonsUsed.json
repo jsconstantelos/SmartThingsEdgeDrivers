@@ -1,0 +1,22 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{waterUsedHighest.value}} {{waterUsedHighest.unit}}"
+            }
+        ],
+        "actions": []
+    },
+    "detailView": [
+        {
+            "label": "Highest Gallons Used",
+            "displayType": "state",
+            "state": {
+                "label": "{{waterUsedHighest.value}}",
+                "unit": "waterUsedHighest.unit"
+            }
+        }
+    ],
+    "id": "laughbook63613.highestGallonsUsed",
+    "version": 1
+}

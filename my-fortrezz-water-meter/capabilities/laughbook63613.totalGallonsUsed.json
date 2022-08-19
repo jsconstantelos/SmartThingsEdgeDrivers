@@ -1,0 +1,22 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{waterUsedTotal.value}} {{waterUsedTotal.unit}}"
+            }
+        ],
+        "actions": []
+    },
+    "detailView": [
+        {
+            "label": "Total Gallons Used",
+            "displayType": "state",
+            "state": {
+                "label": "{{waterUsedTotal.value}}",
+                "unit": "waterUsedTotal.unit"
+            }
+        }
+    ],
+    "id": "laughbook63613.totalGallonsUsed",
+    "version": 1
+}
