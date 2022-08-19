@@ -1,4 +1,0 @@
-name: 'My FortrezZ Water Meter'
-packageKey: 'my-fortrezz-water-meter'
-permissions:
-  zwave: {}
