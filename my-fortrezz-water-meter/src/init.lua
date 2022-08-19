@@ -153,7 +153,7 @@ local function meter_report_handler(self, device, cmd)
     device:emit_event_for_endpoint("main", capabilities.waterSensor.water.dry())
     device:emit_event_for_endpoint("main", cap_waterFlowRate.waterFlowRate(delta))
     device:emit_event_for_endpoint("main", cap_totalGallonsUsed.waterUsedTotal(tonumber(string.format("%.1f",cmd.args.meter_value))))
-    device:emit_event_for_endpoint("main", cap_gallonsLastUsed.waterUsedLast(prevCumulative))
+    device:emit_event_for_endpoint("main", cap_gallonsLastUsed.waterUsedLast(tonumber(string.format("%.1f", prevCumulative))))
 
     return
 
